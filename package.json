@@ -10,7 +10,8 @@
     "flow-typed": "flow-typed",
     "eslint": "eslint",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postinstall": "postinstall-build dist \"npm run build\""
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
   "homepage": "https://github.com/hexlet-boilerplates/javascript-package#readme",
   "dependencies": {
     "pty.js": "*",
-    "debug": "*"
+    "debug": "*",
+    "postinstall-build": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "*",
